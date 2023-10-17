@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Técnica de Abrasivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .print-header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-bottom: 2px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-sheet {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 80%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header h1,
+        .order-info h2 {
+            margin: 0;
+        }
+
+        .dates p {
+            margin: 5px 0;
+        }
+
+        .recuadro {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .recuadro>div {
+            flex: 1;
+            margin: 5px;
+        }
+
+        .recuadro h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .recuadro2 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .recuadro2>div {
+            flex: 1;
+            margin: 5px;
+        }
+
+        .recuadro2 h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        /* Estilos para la sección de materiales */
+        #materialesSection {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            /* Puedes ajustar este valor según tus preferencias */
+            margin: 0 auto;
+            /* Centra la sección horizontalmente */
+        }
+
+        /* Estilos para la sección de materiales */
+        #materialesSection {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Estilos para el título de la sección de materiales */
+        #materialesSection h2 {
+            margin-top: 0;
+        }
+
+        /* Estilos para la lista de materiales */
+        #materialesList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Estilos para los elementos de la lista de materiales */
+        #materialesList li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        #large1,
+        #tallest1,
+        #broad {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #escotes2 {
+            text-align: center;
+            /* Centra el contenido horizontalmente */
+            border: 1px solid black;
+            padding: 20px;
+            margin: 0 auto;
+            /* Centra horizontalmente */
+            width: 200px;
+            height: 60px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1e7e7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="print-header">
+        <div class="order-sheet">
+            <div class="header">
+                <div class="company-info">
+                    <h1>SAILLEN ABRASIVOS S.R.L</h1>
+                    <p>BV DE LOS RUSOS 2895</p>
+                </div>
+                <div class="order-info">
+                    <h2>ORDEN DE TRABAJO</h2>
+                </div>
+            </div>
+            <div class="dates">
+                <p>Fecha: ${printData.fecha}</p>
+                <p>Cliente: ${printData.clientesTo}</p>
+            </div>
+            <hr>
+            <div class="recuadro">
+                <div class="ficha">
+                    <p>Ficha: ${printData.ficha}</p>
+                </div>
+                <div class="tiposgg">
+                    <p>Tipo: ${printData.tipo}</p>
+                    <p>Características: ${printData.caracteristicas}</p>
+                    <p>Medida: ${printData.medidas}</p>
+                </div>
+                <div class="pandp">
+                    <p>Nro Prensa: ${printData.prensa}</p>
+                    <p>Presión: ${printData.presion}</p>
+                </div>
+                <div class="pesoshxr">
+                    <p>Peso piso: ${printData.pesoPiso}</p>
+                    <p>Peso Pared: ${printData.pesoPared}</p>
+                    <p>Peso Total: ${printData.pesoTotal}</p>
+                </div>
+            </div>
+            <!-- Segundo recuadro debajo del primero -->
+            <h2 id="herramentalSUPP">Herramental</h2>
+            <p id="large1">Largo: ${printData.largo}</p>
+            <p id="tallest1">Altura: ${printData.altura}</p>
+            <p id="broad">Ancho: ${printData.ancho}</p>
+            <p id="escotes2">Diametro recorte: ${printData.diametroRecorte}|
+                escotes 1: ${printData.escotes1}|
+                escotes 2: ${printData.escotes2}
+            </p>
+            <p>Buje: ${printData.buje}</p>
+            <p>Codigo: ${printData.CODIGO}</p>
+            <p>Peso recorte: ${printData.pesoRecorte}</p>
+            <p>Tratamiento termico: ${printData.tratamientoTermico}</p>
+
+            <h3>Proporciones y Materiales</h3>
+
+            <table>
+                <tr>
+                    <th>Proporción</th>
+                    <th>Material</th>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion1}</td>
+                    <td>${cantidadesNecesariasGlobal.Material1}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion2}</td>
+                    <td>${cantidadesNecesariasGlobal.Material2}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion3}</td>
+                    <td>${cantidadesNecesariasGlobal.Material3}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion4}</td>
+                    <td>${cantidadesNecesariasGlobal.Material4}</td>
+                </tr>
+                <!-- Repite este bloque para cada proporción y material -->
+                <tr>
+                    <td>${printData.proporcion5}</td>
+                    <td>${cantidadesNecesariasGlobal.Material5}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion6}</td>
+                    <td>${cantidadesNecesariasGlobal.Material6}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion7}</td>
+                    <td>${cantidadesNecesariasGlobal.Material7}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion8}</td>
+                    <td>${cantidadesNecesariasGlobal.Material8}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion9}</td>
+                    <td>${cantidadesNecesariasGlobal.Material9}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion10}</td>
+                    <td>${cantidadesNecesariasGlobal.Material10}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion11}</td>
+                    <td>${cantidadesNecesariasGlobal.Material11}</td>
+                </tr>
+                <tr>
+                    <td>${printData.proporcion12}</td>
+                    <td>${cantidadesNecesariasGlobal.Material12}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

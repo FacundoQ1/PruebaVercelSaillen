@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    background-size: cover;
+}
+
+/* Estilos para los encabezados */
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Estilos para los elementos de datos */
+.item {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón "Comenzar" */
+#startButton {
+    background-color: rgb(50, 150, 250);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    /* Centrar el botón horizontalmente */
+}
+
+#txtOpaccity,
+#textCalle,
+#txtCalle,
+#allowNumbers {
+    opacity: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para los títulos */
+h2 {
+    margin-top: 0;
+}
+
+/* Estilos para los botones */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilos para los contenedores de botones */
+#searchSection,
+#newFichaForm {
+    display: none;
+}
+
+#materialesForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos para los inputs */
+#materialesForm input {
+    width: calc(33.33% - 10px);
+    /* Tres inputs en una fila */
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+#materialesForm input:focus {
+    border-color: #333;
+    /* Cambio de color al enfocar */
+}
+
+/* Estilos para la sección */
+#materialesFK {
+    background-color: #f5f5f5;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Estilos para los placeholders */
+::placeholder {
+    color: #999;
+}
+
+
+body {
+    background-image: url(templates/nuevo_icon.SVG.png);
+    background-size: 30%; /* Cambiado a "cover" para ajustar la imagen a todo el fondo */
+    background-repeat: no-repeat;
+    background-position: center top; /* Centrar la imagen en el fondo */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Resto del CSS sin cambios */
+
+/* Estilo para el h1 */
+h1 {
+    font-family: 'Arial', sans-serif; /* Tipo de fuente */
+    font-size: 2.5rem; /* Ajustado a un tamaño más grande */
+    color: #333; /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+    margin-bottom: 20px; /* Márgenes inferiores */
+}
+
+@keyframes cambioColorInfinito {
+    0%{
+        background-color: white;
+    }
+    10% {
+      background-color: rgb(234, 17, 17); /* Blanco */
+    }
+    20%{
+        background-color: blue;
+    }
+    50% {
+      background-color: #7f5a14; /* Naranja fuerte */
+    }
+    100% {
+      background-color: white; /* Vuelve a blanco para el bucle continuo */
+    }
+}
+
+/* Estilo para el botón */
+#btnInit {
+    padding: 15px 30px; /* Ajustado a un tamaño más grande */
+    font-size: 18px; /* Ajustado a un tamaño más grande */
+    color: #fff; /* Color del texto */
+    background-color: white; /* Color inicial (blanco) */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de apuntador */
+    border-radius: 8px; /* Esquinas redondeadas */
+    animation: cambioColorInfinito 15s infinite; /* Aplicar la animación (5 segundos por ciclo) */
+    
+}
+
+.container{
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.copyright {
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}

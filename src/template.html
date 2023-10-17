@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .print-header {
+        text-align: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-bottom: 2px solid #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .order-sheet {
+        font-family: Arial, sans-serif;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 80%;
+    }
+    /* Estilos para la clase .header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .header h1, .order-info h2 {
+        margin: 0;
+    }
+    /* Estilos para la clase .dates */
+    .dates p {
+        margin: 5px 0;
+    }
+    /* Estilos para las secciones de la ficha */
+    .order-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .order-details > div {
+        flex: 1;
+        margin: 10px;
+    }
+    .order-details h2 {
+        margin-top: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .printed-data p {
+        margin: 5px 0;
+    }
+
+    /* Estilos para los elementos internos dentro del recuadro */
+    .recuadro {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f0f0f0; /* Color de fondo del recuadro */
+        border: 1px solid #ccc; /* Borde del recuadro */
+        margin: 10px; /* Margen exterior para separar de otros elementos */
+        padding: 10px; /* Espaciado interno */
+    }
+    .recuadro > div {
+        flex: 1; /* Hace que cada elemento interno ocupe el mismo espacio horizontal */
+        margin: 5px; /* Espaciado entre elementos internos */
+    }
+    
+    /* Estilos para el segundo recuadro debajo del primero */
+    .recuadro2 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f0f0f0; /* Color de fondo del segundo recuadro */
+        border: 1px solid #ccc; /* Borde del segundo recuadro */
+        margin: 10px; /* Margen exterior para separar de otros elementos */
+        padding: 10px; /* Espaciado interno del segundo recuadro */
+    }
+    .recuadro2 > div {
+        flex: 1; /* Hace que cada elemento interno del segundo recuadro ocupe el mismo espacio horizontal */
+        margin: 5px; /* Espaciado entre elementos internos del segundo recuadro */
+    }
+</style>
+</head>
+<body>
+<div class="printed-data">
+    <div class="print-header">
+        <div class="order-sheet">
+            <div class="header">
+                <div class="company-info">
+                    <h1>SAILLEN ABRASIVOS S.R.L</h1>
+                    <p>BV DE LOS RUSOS 2895</p>
+                </div>
+                <div class="order-info">
+                    <h2>ORDEN DE TRABAJO</h2>
+                    <p>ID: ${randomOrderNumber}</p>
+                </div>
+            </div>
+            <div class="dates">
+                <p>Fecha: ${printData.fecha}</p>
+                <p>Cliente: ${printData.clientesTo}</p>
+            </div>
+            <hr>
+            <div class="recuadro">
+                <div class="ficha">
+                    <p>Ficha: ${printData.ficha}</p>
+                </div>
+                <div class="tiposgg">
+                    <p>Tipo: ${printData.tipo}</p>
+                    <p>Caracteristicas: ${printData.caracteristicas}</p>
+                    <p>Medida: ${printData.medidas}</p>
+                </div>
+                <div class="pandp">
+                    <p>Nro Prensa: ${printData.prensa}</p>
+                    <p>Presion: ${printData.presion}</p>
+                </div>
+                <div class="pesoshxr">
+                    <p>Peso piso: ${printData.pesoPiso}</p>
+                    <p>Peso Pared: ${printData.pesoPared}</p>
+                    <p>Peso Total: ${printData.pesoTotal}</p>
+                </div>
+            </div>
+            
+            <!-- Segundo recuadro debajo del primero -->
+            <div class="recuadro2">
+                <div class="herramiental">
+                    <h2>Herramental</h2>
+                    <p>Largo: ${printData.largo}</p>
+                    <p>Altura: ${printData.altura}</p>
+                    <p>Ancho: ${printData.ancho}</p>
+                </div>
+                <div class="maxxx">
+                    <p>Diametro recorte: ${printData.diametroRecorte}</p>
+                </div>
+                <div class="sorpresaMax">
+                    <p>Buje: ${printData.buje}</p>
+                </div>
+                <div class="newDats">
+                    <p>Codigo: ${printData.CODIGO}</p>
+                </div>
+                <div class="oldsDats">
+                    <p>Peso recorte: ${printData.pesoRecorte}</p>
+                    <p>Tratamiento termico: ${printData.tratamientoTermico}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="scripts.js"></script>
+</html>
