@@ -1,3 +1,4 @@
+emitter.setMaxListeners(50);
 let cantidadesNecesariasGlobal = {};
 let printData = {}; // Datos para impresión
 let randomOrderNumber = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
